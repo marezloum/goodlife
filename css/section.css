@@ -1,0 +1,196 @@
+.section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 60px;
+}
+
+.section__img {
+	width: 100%;
+}
+
+.section__title {
+	color: var(--pink);
+}
+
+.section__subtitle {
+	color: #424242;
+	font-family: Poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 37px; /* 231.25% */
+	margin-top: 6px;
+}
+
+.section__btn {
+	margin-top: 32px;
+}
+
+/* Meet section */
+.meet {
+	padding-top: 95px;
+	padding-bottom: 120px;
+}
+
+.meet .section__item:first-of-type {
+	flex: 0 1 440px;
+}
+
+.meet .section__subtitle {
+	max-width: 540px
+}
+
+/* Facilities section */
+.facilities {
+	padding-top: 220px;
+	padding-bottom: 110px;
+}
+
+.facilities .section__item:last-of-type {
+	flex: 0 1 572px;
+}
+
+.facilities .section__subtitle {
+	max-width: 489px;
+}
+
+/* Banner section */
+.banner {
+	padding-top: 7.6vw;
+	padding-bottom: 5vw;
+	background-color: var(--pink);
+	position: relative;
+}
+
+.banner .section__title {
+	color: white;
+	font-size: clamp(40px, 2.8vw, 60px);
+}
+
+.banner .section__subtitle {
+	color: white;
+	font-size: clamp(16px, 1.2vw, 24px);
+}
+
+.banner__download {
+	margin-top: 20px;
+}
+
+.banner .section__item:first-of-type {
+	flex: 0 1 490px;
+}
+
+.banner .section__item:last-of-type {
+	position: absolute;
+	width: 45vw;
+	height: 40vw;
+	max-height: 117%;
+	bottom: 0;
+	right: 45px;
+	overflow: hidden;
+}
+
+.banner .section__img {
+	height: 49vw;
+	width: unset;
+}
+
+@media screen and (max-width: 992px) {
+	.banner {
+		overflow-x: hidden;
+	}
+
+	.banner .section__item:last-of-type {
+		right: 0;
+		translate: 20% 0;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.section {
+		flex-direction: column;
+		gap: 15px;
+	}
+	
+	.section__img {
+		width: 70%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	/* Meet section */
+	.meet {
+		padding-top: 35px;
+		padding-bottom: 25px;
+	}
+
+	.meet .section__item:first-of-type {
+		flex: unset;
+	}
+
+	.meet .section__subtitle {
+		max-width: 90%;
+	}
+
+	/* Facilities section */
+	.facilities {
+		padding-top: 75px;
+		padding-bottom: 30px;
+	}
+
+	.facilities .section__item:last-of-type {
+		flex: unset;
+		order: -1;
+	}
+
+	.facilities .section__subtitle {
+		max-width: 90%;
+	}
+
+	/* Banner section */
+	.banner {
+		overflow: unset;
+		padding-bottom: 430px;
+	}
+
+	.banner .section__item:first-of-type {
+		flex: unset;
+	}
+
+	.banner .section__item:last-of-type {
+		bottom: -50px;
+		left: 50%;
+		right: unset;
+		translate: -50% 0;
+		height: 455px;
+		width: unset;
+		max-height: unset;
+	}
+
+	.banner .section__img {
+		height: 100%;
+	}
+
+}
+
+@media screen and (max-width: 576px) {
+	.section__img {
+		width: 100%;
+	}
+
+	.section__btn {
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	/* Banner section */
+
+	.banner .section__item:last-of-type {
+		width: 100vw;
+		overflow: hidden;
+	
+	}
+}

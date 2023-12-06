@@ -1,0 +1,161 @@
+:root{
+	--pink: #E43071;
+	--light-pink: #FFC1D8;
+	--green: #26D68A;
+	--light-green: #9BE8C7;
+	--black: #252525;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1160px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.h1 {
+	color: #000;
+	font-family: Poppins;
+	font-size: clamp(32px, 6vw, 70px);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 110%; /* 77px */
+}
+
+.h2 {
+	color: #000;
+	font-family: Poppins;
+	font-size: clamp(42px, 5vw, 60px);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 110%; /* 66px */
+}
+
+.h3 {
+	font-family: Poppins;
+	font-size: clamp(26px, 4vw, 48px);
+	font-style: normal;
+	font-weight: 600;
+	line-height: 119.2%; /* 57.216px */
+}
+
+.h4 {
+	font-family: Poppins;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.h5 {
+	font-family: Poppins;
+	font-size: clamp(26px, 3vw, 38px);
+	font-style: normal;
+	font-weight: 600;
+	line-height: 119.2%; /* 45.296px */
+}
+
+.btn {
+	font-family: Poppins;
+	width: 237px;
+	height: 68px;
+	display: flex;
+	font-weight: 600;
+	justify-content: center;
+	align-items: center;
+	border-radius: 200px;
+	transition: 300ms all;
+	position: relative;
+	overflow: hidden;
+}
+
+.btn:active::after {
+	content: '';
+	display: block;
+	height: 90%;
+	aspect-ratio: 1 / 1;
+	border-radius: 100%;
+	position: absolute;
+	top: var(--y);
+	left: var(--x);
+	translate: -50% -50%;
+}
+
+.btn.btn_sm {
+	width: 166px;
+	height: 50px;
+}
+
+.btn-outline {
+	border: 2px solid var(--pink);
+	color: var(--pink);
+}
+
+.btn-outline:hover {
+	border-color: #BE285E;
+	color: #BE285E;
+}
+
+.btn-outline:focus-visible {
+	outline: 8px solid #FFDAE7;
+}
+
+.btn-outline:active::after {
+	background: var(--pink);
+	opacity: 0.3;
+}
+
+.btn_primary {
+	color: #fff;
+	background: var(--pink);
+}
+
+.btn_primary:hover {
+	background: #BE285E;
+}
+
+.btn_primary:focus-visible {
+	outline: 8px solid #FFDAE7;
+}
+
+.btn_primary:active::after {
+	background: white;
+	opacity: 0.3;
+}
+
+.btn_secondary {
+	color: var(--pink);
+	background: white;
+}
+
+.btn_secondary:hover {
+	color: #BE285E;
+}
+
+.btn_secondary:focus-visible {
+	background: #EFF0F6;
+	outline: 8px solid #EFF0F6;
+}
+
+.btn_secondary:active::after {
+	background: var(--pink);
+	opacity: 0.3;
+}
+
+.main {
+	overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+	.btn {
+		width: 208px;
+		height: 56px;
+	}
+}

@@ -1,0 +1,181 @@
+.stories {
+    padding: 125px 0 80px;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%), #F4E3E9;
+}
+
+.stories__wrapper {
+    padding: 0 100px;
+    display: flex;
+    gap: 30px;
+}
+
+.stories__col {
+    display: flex;
+    flex-direction: column;
+}
+
+.stories__col:first-of-type {
+    align-items: flex-end;
+}
+
+.stories__col:last-of-type {
+    align-items: flex-start;
+}
+
+.stories__title {
+    color: #424242;
+    max-width: 414px;
+    width: 100%;
+    margin-right: 32px;
+}
+
+.stories__subtitle {
+    color: #424242;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
+
+.card {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.18);
+    padding: 35px 32px 38px 27px;
+}
+
+.stories__col:first-of-type .card:nth-of-type(2) {
+    max-width: 350px;
+}
+
+.stories__col:nth-of-type(2) .card:nth-of-type(1) {
+    max-width: 450px;
+    margin-top: 40px;
+}
+
+.stories__col:nth-of-type(2) .card:nth-of-type(2) {
+    max-width: 350px;
+    margin-top: 30px;
+}
+
+.card__title {
+    color: #E43071;
+}
+
+.card__quote {
+    color: #424242;
+    font-family: Poppins;
+    font-size: clamp(12px, 2vw, 18px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+
+.card__quote::before {
+    content: url('../img/quote.svg');
+    position: absolute;
+    left: -5px;
+    top: 0;
+
+}
+
+.card__author {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card__author-avatar {
+    width: 59px;
+    height: 57px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.card__author-avatar img {
+    width: 100%;
+}
+
+.card__author-name {
+    color: #424242;
+    font-family: Poppins;
+    font-size: clamp(12px, 2vw, 18px);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.card__author-text {
+    color: #969BAB;
+    font-family: Poppins;
+    font-size: clamp(10px, 1vw, 14px);
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.stories__slider {
+    display: none;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .stories {
+        padding: 50px 0 40px;
+        background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%), #F4E3E9;
+    }
+
+    .stories .container {
+        padding-right: 0;
+    }
+
+    .stories__wrapper {
+        display: block;
+        padding: 0 0 0 15px;
+    }
+
+    .stories__col .card {
+        display: none;
+    }
+
+    .stories__col:first-of-type {
+        align-items: flex-start;
+    }
+
+    .stories__slider {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        padding-bottom: 5px;
+    }
+
+    .stories__slider .card {
+        margin-right: 25px;
+    }
+
+    .card {
+        padding: 24px 20px;
+        flex: 0 0 75vw;
+    }
+
+    .card__quote {
+        padding-left: 25px;
+    }
+
+    .card__author {
+        padding-left: 25px;
+    }
+
+    .card__author-avatar {
+        width: 41px;
+        height: 39px;
+    }
+}

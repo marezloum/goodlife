@@ -1,0 +1,23 @@
+
+.download__title {
+    color: rgba(255, 255, 255, 0.60);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.download__images {
+    display: flex;
+    margin-top: 10px;
+    gap: 12px;
+}
+
+.download__images > a {
+    flex: 0 1 135px;
+}
+
+.download__images img {
+    width: 100%;
+}
